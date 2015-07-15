@@ -1,4 +1,4 @@
- <?php
+<?php
 namespace luiz\CoreBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -13,7 +13,6 @@ class IndexController extends Controller
      * @Template()
      */
     public function indexAction() {
-        
         $em = $this->getDoctrine()->getManager();
         
         $posts = $em->getRepository('luizModelBundle:Post')->findAllInOrder();
@@ -26,7 +25,6 @@ class IndexController extends Controller
      * @Template()
      */
     public function showAction($id) {
-        
         $em = $this->getDoctrine()->getManager();
         
         $post = $em->getRepository('luizModelBundle:Post')->find($id);
